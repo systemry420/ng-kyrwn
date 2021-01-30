@@ -1,1 +1,17 @@
-<p>staff works!</p>
+<div class="staff">
+  <section *ngFor="let s of staff;">
+    <div class="info">
+        <img [src]="s.avatar"/>
+        <div>
+          <h3> {{s.name}}</h3>
+          <h4> {{s.address}} </h4>
+          <h4> {{s.degree}}
+          </h4>
+      </div>
+    </div>
+    <button class="more" (click)="showInfo($event)">المزيد</button>
+    <p class="info-2">
+      {{s.info}}
+    </p>
+  </section>
+</div>

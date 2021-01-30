@@ -1,0 +1,13 @@
+.info-2 {
+  display: none;
+  margin-top: 20px;
+  color: #333;
+}
+
+.show {
+  display: block;
+}
+
+.info-2 div {
+  padding: .2em 0;
+}

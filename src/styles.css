@@ -222,15 +222,6 @@ button:hover {
     border-radius: 50%;
 }
 
-.info-2 {
-    display: none;
-    margin-top: 20px;
-    color: #333;
-}
-
-.info-2 div {
-    padding: .2em 0;
-}
 
 .start {
     margin: 5px 0;
