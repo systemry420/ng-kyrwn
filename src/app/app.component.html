@@ -11,4 +11,12 @@
 
 <router-outlet></router-outlet>
 
-
+<footer>
+  <ul>
+    <li *ngFor="let p of footer; let i = index">
+      <a (click)="selectedIndex = i"  [routerLink]="[p.url]" [class.selected]="selectedIndex == i">
+        {{ p.text }}
+      </a>
+    </li>
+  </ul>
+</footer>

@@ -30,4 +30,24 @@ export class AppComponent {
       icon: "fa fa-address-card fa-2x"
     },
   ]
+
+  public footer = [
+    {
+      url: "index",
+      text: "الرئيسية",
+    },
+    {
+      url: "about",
+      text: "عن المعهد",
+    },
+    {
+      url: "contact",
+      text: "اتصل بنا",
+    },
+    {
+      url: "staff",
+      text: "من نحن",
+    },
+
+  ]
 }

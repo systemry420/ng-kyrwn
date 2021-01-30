@@ -9,6 +9,7 @@ nav {
   font-family: amiri;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
+  direction: rtl;
 }
 
 nav ul {
@@ -18,6 +19,7 @@ nav ul {
 }
 
 nav ul li {
+  width: 25%;
   padding: 0.5em;
   text-transform: uppercase;
   color: #222;
@@ -36,7 +38,36 @@ nav ul li a {
   height: 60px;
 }
 
-nav ul li:hover, nav ul li:active {
+nav ul li:hover, nav ul li:active, nav ul li.selected {
   background-color: #aadd00;
   cursor: pointer;
+}
+
+
+footer {
+  background-color: #2d711f;
+  background-image: linear-gradient( #0f5800, #111);
+  padding: 1em 2em;
+  font-family: amiri;
+  font-size: 1.4em;
+  direction: rtl;
+}
+
+footer ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-content: space-around;
+}
+
+footer ul li {
+  margin: 1em 0;
+  justify-self: center;
+}
+
+
+footer ul li a {
+  color: #fee;
+  /* border-bottom: 3px solid #ccc; */
 }
