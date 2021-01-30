@@ -1,0 +1,19 @@
+.about {
+  direction: rtl;
+  width: 90%;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 5px 5px lightgray;
+  font-size: 1.3em;
+  color: #333;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+}
+
+.about h1 {
+  text-align: center;
+  margin: .5em;
+}
+
+.about p {
+  margin: 1em 0;
+}
