@@ -20,6 +20,7 @@ import {
 } from './firebase.factory';
 import { PLATFORM_ID, NgZone } from '@angular/core';
 import { environment } from "src/environments/environment";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { environment } from "src/environments/environment";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AngularFirestoreModule,
     FormsModule
   ],
   providers: [

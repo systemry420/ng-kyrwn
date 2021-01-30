@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 import { catchError, tap } from 'rxjs/operators'
-import { BehaviorSubject, throwError } from 'rxjs'
+import { throwError } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,8 @@ import { BehaviorSubject, throwError } from 'rxjs'
 export class AuthService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    @Inject('kayrawan-proj') private kayrawanFS: AngularFirestore,
   ) { }
 
   teacherLogin(email: string, password: string) {
