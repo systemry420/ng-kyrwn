@@ -10,6 +10,8 @@ import { StaffComponent } from './pages/staff/staff.component';
 import { TeacherComponent } from './pages/index/teacher/teacher.component';
 import { StudentComponent } from './pages/index/student/student.component';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { TDashboardComponent } from './pages/index/teacher/t-dashboard/t-dashboard.component'
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { FormsModule } from '@angular/forms'
     ContactComponent,
     StaffComponent,
     TeacherComponent,
-    StudentComponent
+    StudentComponent,
+    TDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

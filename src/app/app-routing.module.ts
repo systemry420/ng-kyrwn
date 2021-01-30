@@ -6,16 +6,21 @@ import { IndexComponent } from './pages/index/index.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { TeacherComponent } from './pages/index/teacher/teacher.component';
 import { StudentComponent } from './pages/index/student/student.component';
+import { TDashboardComponent } from './pages/index/teacher/t-dashboard/t-dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'index',
+    redirectTo: 'tdashboard',
     pathMatch: 'full',
   },
   {
     path: 'index/teacher',
     component: TeacherComponent
+  },
+  {
+    path: 'tdashboard',
+    component: TDashboardComponent
   },
   {
     path: 'index/student',
