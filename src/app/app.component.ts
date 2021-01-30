@@ -12,17 +12,17 @@ export class AppComponent {
     {
       url: "index",
       text: "",
-      icon: "fa fa-home fa-3x"
+      icon: "fas fa-home fa-2x"
     },
     {
       url: "about",
       text: "",
-      icon: "fa fa-university fa-2x"
+      icon: "fas fa-university fa-2x"
     },
     {
       url: "contact",
       text: "",
-      icon: "fa fa-mobile fa-3x"
+      icon: "fas fa-mobile-alt fa-2x"
     },
     {
       url: "staff",

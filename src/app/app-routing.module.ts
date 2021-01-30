@@ -4,13 +4,22 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { IndexComponent } from './pages/index/index.component';
 import { StaffComponent } from './pages/staff/staff.component';
+import { TeacherComponent } from './pages/index/teacher/teacher.component';
+import { StudentComponent } from './pages/index/student/student.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'index',
-    pathMatch: 'full'
-    // component: IndexComponent
+    pathMatch: 'full',
+  },
+  {
+    path: 'index/teacher',
+    component: TeacherComponent
+  },
+  {
+    path: 'index/student',
+    component: StudentComponent
   },
   {
     path: 'index',
