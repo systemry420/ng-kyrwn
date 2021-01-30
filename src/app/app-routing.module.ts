@@ -7,6 +7,8 @@ import { StaffComponent } from './pages/staff/staff.component';
 import { TeacherComponent } from './pages/index/teacher/teacher.component';
 import { StudentComponent } from './pages/index/student/student.component';
 import { TDashboardComponent } from './pages/index/teacher/t-dashboard/t-dashboard.component';
+import { QuizComponent } from './pages/index/teacher/t-dashboard/quiz/quiz.component';
+import { QuestionComponent } from './pages/index/teacher/t-dashboard/question/question.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'tdashboard',
     component: TDashboardComponent
+  },
+  {
+    path: 'tdashboard/quiz',
+    component: QuizComponent
+  },
+  {
+    path: 'tdashboard/question',
+    component: QuestionComponent
   },
   {
     path: 'index/student',
