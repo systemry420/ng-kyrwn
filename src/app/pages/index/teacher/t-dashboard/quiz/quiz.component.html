@@ -1,23 +1,5 @@
 <main class="teacher">
-  <h1>اضافة اختبار</h1>
-  <p class="info"></p>
   <form>
-    <div class="form-group col-md-12">
-        <label for="subject">المادة</label>
-        <select required name="subject" class="form-control" [(ngModel)]="subject">
-          <option value="">- - - </option>
-          <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
-          <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
-          <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
-          <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
-          <option value="ts-mark-edara"> الادارة التجارية - TS</option>
-          <option value="ts-pre-adab"> أدب أطفال - TS</option>
-          <option value="ts-pre-tara"> طرائق التدريس - TS</option>
-          <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
-        </select>
-      </div>
-      <!-- when selecting subject, create new document in coll, then start adding questions -->
-
       <div class="form-group col-md-12">
         <label for="question">السؤال</label>
         <input required type="text" class="form-control" [(ngModel)]="question" name="question" placeholder="السؤال" autocomplete="off">
@@ -38,14 +20,10 @@
         <input required type="text" class="form-control" [(ngModel)]="option3" name="option3" placeholder="الخيار 3" autocomplete="off">
       </div>
 
-      <div class="form-group col-md-12">
+      <!-- <div class="form-group col-md-12">
         <label for="question">الجواب</label>
         <input required type="text" class="form-control" [(ngModel)]="correct" name="correct" placeholder="رقم الجواب" autocomplete="off">
-      </div>
+      </div> -->
 
-    <div class="buttons">
-        <button id="next" class="btn btn-primary" (click)="addQuestion()">السؤال التالي</button>
-        <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
-    </div>
   </form>
 </main>

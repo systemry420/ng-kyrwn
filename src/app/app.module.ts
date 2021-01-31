@@ -21,6 +21,7 @@ import {
 import { PLATFORM_ID, NgZone } from '@angular/core';
 import { environment } from "src/environments/environment";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { DashboardComponent } from './pages/index/teacher/t-dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     StudentComponent,
     TDashboardComponent,
     QuizComponent,
-    QuestionComponent
+    QuestionComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,7 @@ main {
     margin: 2em 0;
     min-height: 50vh;
     font-family: amiri;
+    text-align: center;
 }
 
 .sections {
@@ -126,7 +127,7 @@ input[type='radio']{
     }
 }
 
-button {
+button.green {
     width: 100%;
     background-color: #bada55;
     border: none;
@@ -138,7 +139,7 @@ button {
     font-family: amiri;
 }
 
-button:hover {
+button.green:hover {
     background: #789d00;
 }
 

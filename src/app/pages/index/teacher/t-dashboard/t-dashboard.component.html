@@ -1,22 +1,24 @@
 <main>
-  <div class="subjects">
-    <div>
-      BT
-    </div>
-    <div>
-      TS
-    </div>
-  </div>
   <form>
     <div class="form-group col-md-12">
-      <label for="class" class="col-md-2">الصف</label>
-      <select required name="class" class="form-control col-md-10">
+      <label for="level">المرحلة</label>
+      <select required name="level" class="form-control" [(ngModel)]="level">
         <option value="">- - - </option>
+        <option value="bt">BT</option>
+        <option value="ts">TS</option>
       </select>
     </div>
+
     <div class="form-group col-md-12">
-      <label for="subject" class="col-md-2">المادة</label>
-      <select required name="subject" class="form-control col-md-10">
+      <label for="class">الصف</label>
+      <select required name="class" class="form-control" [(ngModel)]="clas">
+        <option value="-">- - - </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-12">
+      <label for="subject">المادة</label>
+      <select required name="subject" class="form-control" [(ngModel)]="subject">
         <option value="">- - - </option>
         <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
         <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
@@ -28,9 +30,8 @@
         <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
       </select>
     </div>
-    <button id="next" class="btn btn-primary">next</button>
+    <button (click)="next()" class="btn btn-primary btn-block">next</button>
   </form>
-
 
   <!-- <div class="sections">
     <section [routerLink]="['quiz']">

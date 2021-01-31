@@ -1,8 +1,3 @@
-main {
-  margin: 0;
-  padding: 1em 0;
-}
-
 .buttons {
   display: flex;
   flex-direction: column;
@@ -18,7 +13,7 @@ main {
 }
 
 .teacher {
-  background-color: #eee;
+  /* background-color: #eee; */
   direction: rtl;
 }
 

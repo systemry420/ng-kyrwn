@@ -12,14 +12,14 @@
     <form (ngSubmit)="onSubmit()">
       <fieldset>
         <div class="form-group">
-          <label for="email">Email address</label>
-          <input name="email" [(ngModel)]="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <label for="email">البريد الالكتروني</label>
+          <input name="email" [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="البريد الالكتروني">
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input name="password" [(ngModel)]="password" type="password" class="form-control" id="password" placeholder="Enter password">
+          <label for="password">كلمة المرور</label>
+          <input name="password" [(ngModel)]="password" type="password" class="form-control" id="password" placeholder="كلمة المرور">
         </div>
-        <button type="submit" class="btn btn-success btn-block">Submit</button>
+        <button type="submit" class="btn btn-success btn-block">دخول</button>
       </fieldset>
     </form>
   </section>

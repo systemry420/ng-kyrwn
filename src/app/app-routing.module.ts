@@ -9,11 +9,12 @@ import { StudentComponent } from './pages/index/student/student.component';
 import { TDashboardComponent } from './pages/index/teacher/t-dashboard/t-dashboard.component';
 import { QuizComponent } from './pages/index/teacher/t-dashboard/quiz/quiz.component';
 import { QuestionComponent } from './pages/index/teacher/t-dashboard/question/question.component';
+import { DashboardComponent } from './pages/index/teacher/t-dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'index/student',
+    redirectTo: 'tdashboard/dashboard',
     pathMatch: 'full',
   },
   {
@@ -25,13 +26,17 @@ const routes: Routes = [
     component: TDashboardComponent
   },
   {
-    path: 'tdashboard/quiz',
-    component: QuizComponent
+    path: 'tdashboard/dashboard',
+    component: DashboardComponent
   },
-  {
-    path: 'tdashboard/question',
-    component: QuestionComponent
-  },
+  // {
+  //   path: 'tdashboard/quiz',
+  //   component: QuizComponent
+  // },
+  // {
+  //   path: 'tdashboard/question',
+  //   component: QuestionComponent
+  // },
   {
     path: 'index/student',
     component: StudentComponent

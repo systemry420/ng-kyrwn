@@ -1,0 +1,28 @@
+<main>
+  <h1>اضافة اختبار</h1>
+  <form>
+    <div class="form-group col-md-12">
+      <label for="level">Choose type</label>
+      <select required name="level" class="form-control" (change)="changeType($event)">
+        <option value="">- - - </option>
+        <option value="mcq">MCQ</option>
+        <option value="qa">Q/A</option>
+      </select>
+    </div>
+  </form>
+
+
+  <div class="buttons">
+    <button id="next" class="btn btn-primary">السؤال التالي</button>
+    <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
+  </div>
+
+  <p class="info"></p>
+
+  <ng-container *ngIf="questionType == 'mcq'">
+    <app-quiz></app-quiz>
+  </ng-container>
+  <ng-container *ngIf="questionType == 'qa'">
+    <app-question></app-question>
+  </ng-container>
+</main>
