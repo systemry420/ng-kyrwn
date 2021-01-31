@@ -1,5 +1,5 @@
 .about {
-  direction: rtl;
+  /* direction: rtl; */
   width: 90%;
   border: 1px solid lightgray;
   box-shadow: 0 0 5px 5px lightgray;
@@ -15,5 +15,9 @@
 }
 
 .about p {
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 1em;
 }

@@ -2,6 +2,7 @@
   display: none;
   margin-top: 20px;
   color: #333;
+  direction: rtl;
 }
 
 .show {
@@ -10,4 +11,36 @@
 
 .info-2 div {
   padding: .2em 0;
+}
+
+.staff {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  direction: rtl;
+}
+
+.staff section {
+  direction: rtl;
+  width: 40%;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px lightgray;
+  font-size: 1.2em;
+  margin:1em;
+  background-color: #fbfbfb;
+}
+
+.info {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  color: #222;
+}
+
+.info img {
+  margin-left: 1em;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }

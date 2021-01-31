@@ -4,13 +4,13 @@
   <form>
     <div class="form-group col-md-12">
         <label for="subject">المادة</label>
-        <select required id="subject" class="form-control">
+        <select required name="subject" class="form-control" [(ngModel)]="subject">
           <option value="">- - - </option>
-          <option value="bt1-nurse"> العناية الصحية - BT1</option>
-          <option value="bt-social"> العلوم الاجتماعية- BT</option>
-          <option value="bt3-nurse"> العناية الصحية - BT3</option>
-          <option value="ts-nur-nurse"> العناية الصحية - TS</option>
-          <option value="ts-mar-edara"> الادارة التجارية - TS</option>
+          <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
+          <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
+          <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
+          <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
+          <option value="ts-mark-edara"> الادارة التجارية - TS</option>
           <option value="ts-pre-adab"> أدب أطفال - TS</option>
           <option value="ts-pre-tara"> طرائق التدريس - TS</option>
           <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
@@ -20,32 +20,32 @@
 
       <div class="form-group col-md-12">
         <label for="question">السؤال</label>
-        <input required type="text" class="form-control" id="question" placeholder="السؤال" autocomplete="off">
+        <input required type="text" class="form-control" [(ngModel)]="question" name="question" placeholder="السؤال" autocomplete="off">
       </div>
 
       <div class="form-group col-md-12">
         <label for="option1">الخيار 1</label>
-        <input required type="text" class="form-control" id="option1" placeholder="الخيار 1" autocomplete="off">
+        <input required type="text" class="form-control" [(ngModel)]="option1" name="option1" placeholder="الخيار 1" autocomplete="off">
       </div>
 
       <div class="form-group col-md-12">
         <label for="question">الخيار 2</label>
-        <input required type="text" class="form-control" id="option2" placeholder="الخيار 2" autocomplete="off">
+        <input required type="text" class="form-control" [(ngModel)]="option2" name="option2" placeholder="الخيار 2" autocomplete="off">
       </div>
 
       <div class="form-group col-md-12">
         <label for="question">الخيار 3</label>
-        <input required type="text" class="form-control" id="option3" placeholder="الخيار 3" autocomplete="off">
+        <input required type="text" class="form-control" [(ngModel)]="option3" name="option3" placeholder="الخيار 3" autocomplete="off">
       </div>
 
       <div class="form-group col-md-12">
         <label for="question">الجواب</label>
-        <input required type="text" class="form-control" id="correct" placeholder="رقم الجواب" autocomplete="off">
+        <input required type="text" class="form-control" [(ngModel)]="correct" name="correct" placeholder="رقم الجواب" autocomplete="off">
       </div>
 
     <div class="buttons">
-        <button id="next" class="btn btn-primary">السؤال التالي</button>
-        <button id="submit" type="submit" class="btn btn-danger">حفظ الإختبار</button>
+        <button id="next" class="btn btn-primary" (click)="addQuestion()">السؤال التالي</button>
+        <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
     </div>
   </form>
 </main>

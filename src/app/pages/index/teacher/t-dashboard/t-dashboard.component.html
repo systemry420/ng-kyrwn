@@ -1,11 +1,44 @@
 <main>
-  <div class="sections">
+  <div class="subjects">
+    <div>
+      BT
+    </div>
+    <div>
+      TS
+    </div>
+  </div>
+  <form>
+    <div class="form-group col-md-12">
+      <label for="class" class="col-md-2">الصف</label>
+      <select required name="class" class="form-control col-md-10">
+        <option value="">- - - </option>
+      </select>
+    </div>
+    <div class="form-group col-md-12">
+      <label for="subject" class="col-md-2">المادة</label>
+      <select required name="subject" class="form-control col-md-10">
+        <option value="">- - - </option>
+        <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
+        <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
+        <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
+        <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
+        <option value="ts-mark-edara"> الادارة التجارية - TS</option>
+        <option value="ts-pre-adab"> أدب أطفال - TS</option>
+        <option value="ts-pre-tara"> طرائق التدريس - TS</option>
+        <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
+      </select>
+    </div>
+    <button id="next" class="btn btn-primary">next</button>
+  </form>
+
+
+  <!-- <div class="sections">
     <section [routerLink]="['quiz']">
       <h2>خيارات متعددة</h2>
     </section>
-    
+
     <section [routerLink]="['question']">
       <h2>سؤال وجواب</h2>
     </section>
-  </div>
+  </div> -->
 </main>

@@ -16,8 +16,6 @@ export class AuthService {
   ) { }
 
   teacherLogin(email: string, password: string) {
-    console.log(email, password);
-
     return this.http.post<any>(
       'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCnowTTt-juDiyc-ykbgiQeGSVh9j6SWQw',
       {
