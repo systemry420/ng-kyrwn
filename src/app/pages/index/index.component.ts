@@ -12,4 +12,8 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirect() {
+    window.location.href = 'https://kayrawan-quiz.web.app/'
+  }
+
 }

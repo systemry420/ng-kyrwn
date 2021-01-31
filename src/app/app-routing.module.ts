@@ -13,7 +13,7 @@ import { QuestionComponent } from './pages/index/teacher/t-dashboard/question/qu
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'tdashboard',
+    redirectTo: 'index/student',
     pathMatch: 'full',
   },
   {

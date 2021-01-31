@@ -6,7 +6,7 @@
         class="fas fa-chalkboard-teacher"></i>
       <h3>بوابة المعلم</h3>
     </section>
-    <section [routerLink]="['student']">
+    <section (click)="redirect()">
       <i
         style="font-size: 2em; color: rgb(102, 0, 102);"
         class="fas fa-users-class">
@@ -15,3 +15,4 @@
     </section>
   </div>
 </main>
+
