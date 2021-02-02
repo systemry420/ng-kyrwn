@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  step1 = false
   level; clas; subject
 
   questionType;
@@ -28,7 +29,7 @@ export class DashboardComponent implements OnInit {
 
   next() {
     if(this.level && this.clas && this.subject){
-      this.router.navigate(['tdashboard/dashboard'])
+      this.step1 = true;
     }
   }
 

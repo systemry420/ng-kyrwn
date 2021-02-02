@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: center;
 }
 
 form {
@@ -11,7 +10,20 @@ form {
 }
 
 .btn {
-  width: 80%;
   margin-bottom: 1em;
   font-family: amiri;
+}
+
+form {
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+select {
+  background-color: #efefef;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
 }

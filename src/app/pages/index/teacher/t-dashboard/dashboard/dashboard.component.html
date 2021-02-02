@@ -1,56 +1,60 @@
 <main>
+  <h1>وضع امتحان</h1>
+  <ng-container *ngIf="!step1">
+    <form>
+      <div class="form-group col-md-12">
+        <label for="level">المرحلة</label>
+        <select required name="level" class="form-control" [(ngModel)]="level">
+          <option value="">- - - </option>
+          <option value="bt">BT</option>
+          <option value="ts">TS</option>
+        </select>
+      </div>
 
-  <form>
-    <div class="form-group col-md-12">
-      <label for="level">المرحلة</label>
-      <select required name="level" class="form-control" [(ngModel)]="level">
-        <option value="">- - - </option>
-        <option value="bt">BT</option>
-        <option value="ts">TS</option>
-      </select>
-    </div>
+      <div class="form-group col-md-12">
+        <label for="class">الصف</label>
+        <select required name="class" class="form-control" [(ngModel)]="clas">
+          <option value="-">- - - </option>
+        </select>
+      </div>
 
-    <div class="form-group col-md-12">
-      <label for="class">الصف</label>
-      <select required name="class" class="form-control" [(ngModel)]="clas">
-        <option value="-">- - - </option>
-      </select>
-    </div>
+      <div class="form-group col-md-12">
+        <label for="subject">المادة</label>
+        <select required name="subject" class="form-control" [(ngModel)]="subject">
+          <option value="">- - - </option>
+          <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
+          <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
+          <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
+          <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
+          <option value="ts-mark-edara"> الادارة التجارية - TS</option>
+          <option value="ts-pre-adab"> أدب أطفال - TS</option>
+          <option value="ts-pre-tara"> طرائق التدريس - TS</option>
+          <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
+        </select>
+      </div>
+      <div class="form-group col-md-12">
+        <button (click)="next()" class="btn btn-primary btn-block">التالي</button>
+      </div>
+    </form>
+  </ng-container>
 
-    <div class="form-group col-md-12">
-      <label for="subject">المادة</label>
-      <select required name="subject" class="form-control" [(ngModel)]="subject">
-        <option value="">- - - </option>
-        <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
-        <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
-        <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
-        <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
-        <option value="ts-mark-edara"> الادارة التجارية - TS</option>
-        <option value="ts-pre-adab"> أدب أطفال - TS</option>
-        <option value="ts-pre-tara"> طرائق التدريس - TS</option>
-        <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
-      </select>
-    </div>
-    <button (click)="next()" class="btn btn-primary btn-block">next</button>
-  </form>
-  
-  <h1>اضافة اختبار</h1>
-  <form>
-    <div class="form-group col-md-12">
-      <label for="level">Choose type</label>
-      <select required name="level" class="form-control" (change)="changeType($event)">
-        <option value="">- - - </option>
-        <option value="mcq">خيارات متعددة</option>
-        <option value="qa">سؤال/جواب</option>
-      </select>
-    </div>
-  </form>
+  <ng-container *ngIf="step1">
+    <form>
+      <div class="form-group col-md-12">
+        <label for="level">الرجاء اختيار نوع السؤال</label>
+        <select required name="level" class="form-control" (change)="changeType($event)">
+          <option value="">- - - </option>
+          <option value="mcq">خيارات متعددة</option>
+          <option value="qa">سؤال/جواب</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button id="next" class="btn btn-primary">السؤال التالي</button>
+        <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
+      </div>
+    </form>
+  </ng-container>
 
-
-  <div class="buttons">
-    <button id="next" class="btn btn-primary">السؤال التالي</button>
-    <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
-  </div>
 
   <p class="info"></p>
 
