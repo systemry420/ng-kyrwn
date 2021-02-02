@@ -1,37 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
+interface Data {
+  question: string;
+  option1: string;
+  option2: string;
+  option3?: string;
+}
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-  subject; question; option1; option2; option3; correct
+  @Output() nextEvent = new EventEmitter();
 
-  arrayOfQuestion = []
-
+  data = {
+    question: '',
+    option1: '',
+    option2: '',
+    option3: ''
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addQuestion() {
-    this.arrayOfQuestion.push(
-      { 'question': this.question,
-        'op1': this.option1,
-        'op2': this.option2,
-        'op3': this.option3,
-        'correct': this.correct
-      }
-    )
+  nextQuestion() {
+    // emit data to parent
+    this.nextEvent.emit(this.data);
 
-    this.question = ''
-    this.option1 = ''
-    this.option2 = ''
-    this.option3 = ''
-    this.correct = ''
+    this.data = {
+      question: '',
+      option1: '',
+      option2: '',
+      option3: ''
+    }
 
-    console.log(this.arrayOfQuestion);
   }
 
 }

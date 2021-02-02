@@ -1,4 +1,4 @@
-.teacher {
+.quiz {
   /* background-color: #eee; */
   direction: rtl;
 }
@@ -26,6 +26,10 @@ label {
 form {
   margin: 0 auto 1em auto;
   width: 90%;
+}
+
+.form-control {
+  background-color: #efefef;
 }
 
 .buttons {

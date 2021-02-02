@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-question',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
   question
+  @Output() nextEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  nextQuestion() {
+    // emit question to parent
+    this.nextEvent.emit(this.question)
+    console.log(this.question);
+
   }
 
 }

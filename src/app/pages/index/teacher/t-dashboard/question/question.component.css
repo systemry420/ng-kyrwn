@@ -14,3 +14,11 @@ form {
   margin-bottom: 1em;
   font-family: amiri;
 }
+
+.form-control {
+  background-color: #efefef;
+}
+
+.questions {
+  direction: rtl;
+}

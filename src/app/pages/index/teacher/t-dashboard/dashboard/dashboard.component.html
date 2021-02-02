@@ -2,34 +2,29 @@
   <h1>وضع امتحان</h1>
   <ng-container *ngIf="!step1">
     <form>
-      <div class="form-group col-md-12">
+      <!-- <div class="form-group col-md-12">
         <label for="level">المرحلة</label>
-        <select required name="level" class="form-control" [(ngModel)]="level">
+        <select required name="level" class="form-control" [(ngModel)]="level" (change)="getClasses($event)">
           <option value="">- - - </option>
           <option value="bt">BT</option>
           <option value="ts">TS</option>
         </select>
-      </div>
+      </div> -->
 
       <div class="form-group col-md-12">
         <label for="class">الصف</label>
-        <select required name="class" class="form-control" [(ngModel)]="clas">
+        <select required name="class" class="form-control" [(ngModel)]="clas" (change)="getSubjects($event)">
           <option value="-">- - - </option>
+          <option value="bt3-nursing">bt3-nursing </option>
+          <option value="bt1-nurse">bt1-nurse</option>
+          <option value="bt-accounting">bt-accounting </option>
         </select>
       </div>
 
       <div class="form-group col-md-12">
         <label for="subject">المادة</label>
         <select required name="subject" class="form-control" [(ngModel)]="subject">
-          <option value="">- - - </option>
-          <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
-          <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
-          <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
-          <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
-          <option value="ts-mark-edara"> الادارة التجارية - TS</option>
-          <option value="ts-pre-adab"> أدب أطفال - TS</option>
-          <option value="ts-pre-tara"> طرائق التدريس - TS</option>
-          <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
+          <option *ngFor="let sub of subsNames" [value]="sub.key">{{sub.value}}</option>
         </select>
       </div>
       <div class="form-group col-md-12">
@@ -57,13 +52,23 @@
   <p class="info"></p>
 
   <ng-container *ngIf="questionType == 'mcq'">
-    <app-quiz></app-quiz>
+    <app-quiz (nextEvent)="addQuiz($event)"></app-quiz>
   </ng-container>
   <ng-container *ngIf="questionType == 'qa'">
-    <app-question></app-question>
+    <app-question (nextEvent)="addQuestion($event)"></app-question>
   </ng-container>
 
   <ng-container class="output">
 
   </ng-container>
 </main>
+
+
+<!-- <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
+<option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
+<option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
+<option value="ts-nurse-nurse"> العناية الصحية - TS</option>
+<option value="ts-mark-edara"> الادارة التجارية - TS</option>
+<option value="ts-pre-adab"> أدب أطفال - TS</option>
+<option value="ts-pre-tara"> طرائق التدريس - TS</option>
+<option value="ts-pre-tarikh"> تاريخ التيارات - TS</option> -->
