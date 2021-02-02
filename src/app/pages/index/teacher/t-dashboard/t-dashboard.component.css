@@ -1,7 +1,13 @@
 form {
   margin: 1em;
+  width: 90%;
 }
 
 select {
   background-color: #efefef;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
 }

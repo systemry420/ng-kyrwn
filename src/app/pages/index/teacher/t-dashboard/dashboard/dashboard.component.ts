@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  questionType
-  constructor() { }
+  level; clas; subject
+
+  questionType;
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +23,12 @@ export class DashboardComponent implements OnInit {
     }
     else {
       this.questionType = 'qa'
+    }
+  }
+
+  next() {
+    if(this.level && this.clas && this.subject){
+      this.router.navigate(['tdashboard/dashboard'])
     }
   }
 

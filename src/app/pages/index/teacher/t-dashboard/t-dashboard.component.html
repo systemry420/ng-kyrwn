@@ -1,45 +1,15 @@
 <main>
-  <form>
-    <div class="form-group col-md-12">
-      <label for="level">المرحلة</label>
-      <select required name="level" class="form-control" [(ngModel)]="level">
-        <option value="">- - - </option>
-        <option value="bt">BT</option>
-        <option value="ts">TS</option>
-      </select>
-    </div>
 
-    <div class="form-group col-md-12">
-      <label for="class">الصف</label>
-      <select required name="class" class="form-control" [(ngModel)]="clas">
-        <option value="-">- - - </option>
-      </select>
-    </div>
 
-    <div class="form-group col-md-12">
-      <label for="subject">المادة</label>
-      <select required name="subject" class="form-control" [(ngModel)]="subject">
-        <option value="">- - - </option>
-        <option value="bt-nurse-nurse"> العناية الصحية - BT1</option>
-        <option value="bt-acc-social"> العلوم الاجتماعية- BT</option>
-        <option value="bt-nurse-nurse"> العناية الصحية - BT3</option>
-        <option value="ts-nurse-nurse"> العناية الصحية - TS</option>
-        <option value="ts-mark-edara"> الادارة التجارية - TS</option>
-        <option value="ts-pre-adab"> أدب أطفال - TS</option>
-        <option value="ts-pre-tara"> طرائق التدريس - TS</option>
-        <option value="ts-pre-tarikh"> تاريخ التيارات - TS</option>
-      </select>
-    </div>
-    <button (click)="next()" class="btn btn-primary btn-block">next</button>
-  </form>
-
-  <!-- <div class="sections">
-    <section [routerLink]="['quiz']">
-      <h2>خيارات متعددة</h2>
+  <div class="sections">
+    <section [routerLink]="['dashboard']">
+      <i class="fas fa-book" style="color:rgb(255, 88, 28); font-size: 2em"></i>
+      <h2>وضع امتحان</h2>
     </section>
 
-    <section [routerLink]="['question']">
-      <h2>سؤال وجواب</h2>
+    <section>
+      <i class="fas fa-users-class" style="color: rgb(47, 79, 255); font-size: 2em"></i>
+      <h2>ملف الطلاب</h2>
     </section>
-  </div> -->
+  </div>
 </main>

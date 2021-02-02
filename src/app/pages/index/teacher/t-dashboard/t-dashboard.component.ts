@@ -16,10 +16,6 @@ export class TDashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next() {
-    if(this.level && this.clas && this.subject){
-      this.router.navigate(['tdashboard/dashboard'])
-    }
-  }
+  
 
 }
