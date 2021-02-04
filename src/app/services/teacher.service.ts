@@ -26,13 +26,26 @@ export class TeacherService {
     }
 
 
-  addQuiz() {
+  addQuiz(cls, subject, questions) {
+    let date = new Date()
+    let d = (date.getDate() + '-' + (date.getMonth() + 1)  + '-' + date.getFullYear() + date.getTime()).toString();
 
+    return this.kayrawanFS.collection(cls).doc(subject)
+    .update(
+      {[d]: questions}
+    ).then(()=>{
+      console.log("added quiz")
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   // // tetsing quiz
   // getQuiz() {
-  //   this.kayrawanFS.collection("bt3-nursing").doc("health-care")
+  //   let date = new Date()
+  //   let d = ((date.getMonth() + 1) + 'd' + date.getDate() + 'm' + date.getFullYear()).toString()
+  //   this.kayrawanFS.collection("bt3_nursing").doc("health_care/" + d + '/' + d)
   //   .valueChanges().subscribe(data=>{
   //     let date = new Date()
   //     let d = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear()).toString()
@@ -43,6 +56,7 @@ export class TeacherService {
   //       console.log(index);
   //       const name = Object.keys(sub).toString()
   //       const display = Object.values(sub).toString()
+  //       console.log(sub);
   //       if(index == d) {
   //         console.log(sub);
 

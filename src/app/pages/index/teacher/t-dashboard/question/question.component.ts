@@ -16,8 +16,7 @@ export class QuestionComponent implements OnInit {
   nextQuestion() {
     // emit question to parent
     this.nextEvent.emit(this.question)
-    console.log(this.question);
-
+    this.question = ''
   }
 
 }

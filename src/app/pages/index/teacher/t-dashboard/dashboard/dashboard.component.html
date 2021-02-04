@@ -44,7 +44,7 @@
         </select>
       </div>
       <div class="buttons">
-        <button id="submit" class="btn btn-danger">حفظ الإختبار</button>
+        <button id="submit" class="btn btn-danger" (click)="submitQuiz()">حفظ الإختبار</button>
       </div>
     </form>
   </ng-container>
@@ -52,7 +52,7 @@
   <p class="info"></p>
 
   <ng-container *ngIf="questionType == 'mcq'">
-    <app-quiz (nextEvent)="addQuiz($event)"></app-quiz>
+    <app-quiz (nextEvent)="addQuestion($event)"></app-quiz>
   </ng-container>
   <ng-container *ngIf="questionType == 'qa'">
     <app-question (nextEvent)="addQuestion($event)"></app-question>

@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   }
 
   next() {
+    // this.teacherService.getQuiz()
     if(this.clas && this.subject){
       this.step1 = true;
     }
@@ -36,11 +37,22 @@ export class DashboardComponent implements OnInit {
   }
 
   addQuestion(ev) {
-    console.log(ev);
+    if(this.questionType == 'mcq') {
+      let question = {'mcq': ev}
+      this.currentExam.push(question)
+    }
+    else if(this.questionType == 'qa') {
+      let question = {'qa': ev}
+      this.currentExam.push(question)
+    }
   }
 
-  addQuiz(ev) {
+  submitQuiz() {
+    this.teacherService.addQuiz(this.clas, this.subject, this.currentExam)
+    .then(response=>{
+      console.log(response);
 
+    })
   }
 
   getSubjects(ev) {
