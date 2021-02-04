@@ -23,11 +23,34 @@ export class TeacherService {
           // return { data };
         })
       )
-  }
+    }
+
 
   addQuiz() {
 
   }
+
+  // // tetsing quiz
+  // getQuiz() {
+  //   this.kayrawanFS.collection("bt3-nursing").doc("health-care")
+  //   .valueChanges().subscribe(data=>{
+  //     let date = new Date()
+  //     let d = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear()).toString()
+  //     console.log(data, d);
+
+  //     Object.keys(data).map((index)=>{
+  //       let sub = data[index];
+  //       console.log(index);
+  //       const name = Object.keys(sub).toString()
+  //       const display = Object.values(sub).toString()
+  //       if(index == d) {
+  //         console.log(sub);
+
+  //       }
+  //     })
+  //   })
+  // }
+
 }
 
 // .pipe(

@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   questionType;
   constructor(
     private router: Router,
-    private teacherService: TeacherService
+    private teacherService: TeacherService,
   ) { }
 
   ngOnInit(): void {
