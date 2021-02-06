@@ -58,7 +58,23 @@
     <app-question (nextEvent)="addQuestion($event)"></app-question>
   </ng-container>
 
-  <ng-container class="output">
-
-  </ng-container>
 </main>
+<ng-container class="output">
+  <div *ngFor="let q of output; let i = index" class="question">
+    <i
+      class="fa fa-remove"
+      style="color: red; padding: 6px; font-size: 1.5em; cursor: pointer;"
+      (click)="removeQuestion(i)">
+    </i>
+
+    <div *ngIf="q.type == 'mcq' " class="mcq">
+      {{ q.q.question }} <br>
+      {{ q.q.option1 }} <br>
+      {{ q.q.option2 }} <br>
+      {{ q.q.option3 }} <br>
+    </div>
+    <div *ngIf="q.type == 'qa' " class="qa">
+      {{ q.q }}
+    </div>
+  </div>
+</ng-container>

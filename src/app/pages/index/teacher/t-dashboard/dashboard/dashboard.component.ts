@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
       this.questionType = 'qa'
     }
   }
-
+output = []
   addQuestion(ev) {
     if(this.questionType == 'mcq') {
       let question = {'mcq': ev}
@@ -45,6 +45,18 @@ export class DashboardComponent implements OnInit {
       let question = {'qa': ev}
       this.currentExam.push(question)
     }
+    
+    let ob = {
+      type: this.questionType,
+      q: ev
+    }
+    console.log(ob)
+    this.output.push(ob)
+  }
+
+  removeQuestion(i) {
+    this.currentExam.splice(i, 1)
+    this.output.splice(i, 1)
   }
 
   submitQuiz() {

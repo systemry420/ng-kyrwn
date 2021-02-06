@@ -44,7 +44,7 @@ export class TeacherService {
   // // tetsing quiz
   // getQuiz() {
   //   let date = new Date()
-  //   let d = ((date.getMonth() + 1) + 'd' + date.getDate() + 'm' + date.getFullYear()).toString()
+  //   let d = ((date.getMonth() + 1) + '-' + date.getDate() + '-' + date.getFullYear()).toString()
   //   this.kayrawanFS.collection("bt3_nursing").doc("health_care/" + d + '/' + d)
   //   .valueChanges().subscribe(data=>{
   //     let date = new Date()
