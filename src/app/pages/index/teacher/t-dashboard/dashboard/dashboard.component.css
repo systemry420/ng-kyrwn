@@ -34,3 +34,7 @@ section {
   text-align: right;
 }
 
+.form-control {
+  direction: rtl;
+}
+

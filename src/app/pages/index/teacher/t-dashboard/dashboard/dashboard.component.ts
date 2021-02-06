@@ -9,9 +9,11 @@ import { TeacherService } from 'src/app/services/teacher.service';
 })
 export class DashboardComponent implements OnInit {
   step1 = false; subsNames
-  clas; subject
+  clas; subject; duration
   currentExam = []
   questionType;
+  output = []
+
   constructor(
     private router: Router,
     private teacherService: TeacherService,
@@ -21,7 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   next() {
-    // this.teacherService.getQuiz()
+    // this.teacherService.getStudent()
     if(this.clas && this.subject){
       this.step1 = true;
     }
@@ -35,7 +37,7 @@ export class DashboardComponent implements OnInit {
       this.questionType = 'qa'
     }
   }
-output = []
+
   addQuestion(ev) {
     if(this.questionType == 'mcq') {
       let question = {'mcq': ev}
@@ -45,7 +47,7 @@ output = []
       let question = {'qa': ev}
       this.currentExam.push(question)
     }
-    
+
     let ob = {
       type: this.questionType,
       q: ev
@@ -60,6 +62,7 @@ output = []
   }
 
   submitQuiz() {
+    this.currentExam.unshift(this.duration)
     this.teacherService.addQuiz(this.clas, this.subject, this.currentExam)
     .then(response=>{
       console.log(response);

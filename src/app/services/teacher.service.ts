@@ -41,6 +41,14 @@ export class TeacherService {
     })
   }
 
+  // getStudent() {
+  //   this.kayrawanFS.collection("bt").doc("bt-accounting/stds/fn1/submission/health-care")
+  //   .valueChanges().subscribe(data=>{
+  //     console.log(data);
+
+  //   })
+  // }
+
   // // tetsing quiz
   // getQuiz() {
   //   let date = new Date()
