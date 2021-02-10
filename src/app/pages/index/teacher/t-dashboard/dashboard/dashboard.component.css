@@ -3,7 +3,7 @@ form {
   width: 90%;
 }
 
-select {
+select, input {
   background-color: #efefef;
 }
 

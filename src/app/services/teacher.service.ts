@@ -26,13 +26,18 @@ export class TeacherService {
     }
 
 
-  addQuiz(cls, subject, questions) {
+  addQuiz(day, time, duration, cls, subject, questions) {
     let date = new Date()
-    let d = (date.getDate() + '-' + (date.getMonth() + 1)  + '-' + date.getFullYear() + date.getTime()).toString();
+    let d = ((date.getMonth() + 1) + '-' + date.getDate() + '-' + date.getFullYear() + date.getTime()).toString()
 
-    return this.kayrawanFS.collection(cls).doc(subject)
-    .update(
-      {[d]: questions}
+    return this.kayrawanFS.collection('exams').doc(cls + '/'+ subject + '/'+ day)
+    .set(
+      {
+        'day': day,
+        'duration': duration,
+        'time': time,
+        'data': questions
+      }
     ).then(()=>{
       console.log("added quiz")
     })

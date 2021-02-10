@@ -9,7 +9,7 @@ import { TeacherService } from 'src/app/services/teacher.service';
 })
 export class DashboardComponent implements OnInit {
   step1 = false; subsNames
-  clas; subject; duration
+  clas; subject; duration; day; time
   currentExam = []
   questionType;
   output = []
@@ -62,8 +62,7 @@ export class DashboardComponent implements OnInit {
   }
 
   submitQuiz() {
-    this.currentExam.unshift(this.duration)
-    this.teacherService.addQuiz(this.clas, this.subject, this.currentExam)
+    this.teacherService.addQuiz(this.day, this.time, this.duration, this.clas, this.subject, this.currentExam)
     .then(response=>{
       console.log(response);
 
