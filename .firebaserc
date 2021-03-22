@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kayrawan-lb": {
+      "hosting": {
+        "kayrawan": [
+          "kayrawan-lb"
+        ]
+      }
+    }
+  }
+}
