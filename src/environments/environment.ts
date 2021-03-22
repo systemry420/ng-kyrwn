@@ -12,16 +12,6 @@ export const environment = {
     messagingSenderId: "384881538238",
     appId: "1:384881538238:web:9afefa6c231f0ba876daef",
     measurementId: "G-MF3DE5NM4P"
-  },
-  quizConfig:{
-    apiKey: "AIzaSyAiEA_TpvnjNib-EWCxn2awsT4x5L4kRwA",
-    authDomain: "kayrawan-quiz.firebaseapp.com",
-    databaseURL: "https://kayrawan-quiz.firebaseio.com",
-    projectId: "kayrawan-quiz",
-    storageBucket: "kayrawan-quiz.appspot.com",
-    messagingSenderId: "468059140378",
-    appId: "1:468059140378:web:7cc6d6f2cbb97962fafca3",
-    measurementId: "G-FL849SJ7KJ"
   }
 };
 

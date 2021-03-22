@@ -19,6 +19,7 @@ main {
     min-height: 50vh;
     font-family: amiri;
     text-align: center;
+    width: 100%;
 }
 
 .sections {
@@ -161,7 +162,6 @@ button.green:hover {
 
 .more {
     font-family: amiri;
-    padding: .5em;
     margin-top: 20px;
     border-radius: 5px;
 }
@@ -197,15 +197,10 @@ button.green:hover {
         /* font-size: 2em; */
     }
 
-    .sections section {
+    .sections section, .staff .section {
         width: 90%;
+        margin: 0.8em 0;
     }
-
-    .staff section {
-
-        width: 90%;
-    }
-
 
     .container {
         width: 90%;

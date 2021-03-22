@@ -1,7 +1,8 @@
 <nav>
   <ul>
-    <li *ngFor="let p of pages; let i = index">
-      <a (click)="selectedIndex = i"  [routerLink]="[p.url]" [class.selected]="selectedIndex == i">
+    <li *ngFor="let p of pages; let i = index" routerLinkActive="selected">
+      <a (click)="selectedIndex = i"  [routerLink]="[p.url]" [class.selected]="selectedIndex == i"
+      >
         <i [class]="p.icon"></i>
         {{ p.text }}
       </a>

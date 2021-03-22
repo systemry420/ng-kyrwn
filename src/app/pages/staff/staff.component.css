@@ -20,9 +20,23 @@
   direction: rtl;
 }
 
+@media screen and (max-width: 768px) {
+  .staff {
+    flex-direction: column;
+  }
+
+  .staff section, section {
+    width: 90%;
+
+  }
+}
+
+section {
+  width: 40%;
+}
+
 .staff section {
   direction: rtl;
-  width: 40%;
   padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 0 5px 5px lightgray;

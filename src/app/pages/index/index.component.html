@@ -1,12 +1,18 @@
 <main>
-  <div class="sections">
-    <section [routerLink]="['teacher']">
+
+  <div id="image">
+    <img src="../../../assets/images/logo.jpg" class="img"  height="120" />
+    <h1 style="text-align: center;">معهد القيروان الفني</h1>
+  </div>
+
+  <div class="sections" (click)="redirect('tr')">
+    <section >
       <i
         style="font-size: 2em; color:rgb(0, 125, 209);"
         class="fas fa-chalkboard-teacher"></i>
       <h3>بوابة المعلم</h3>
     </section>
-    <section (click)="redirect()">
+    <section (click)="redirect('st')">
       <i
         style="font-size: 2em; color: rgb(102, 0, 102);"
         class="fas fa-users-class">
